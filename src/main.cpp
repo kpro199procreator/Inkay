@@ -45,7 +45,7 @@
     Mandatory plugin information.
     If not set correctly, the loader will refuse to use the plugin.
 **/
-WUMS_MODULE_EXPORT_NAME("SShop");
+WUMS_MODULE_EXPORT_NAME("inkay");
 WUMS_MODULE_DESCRIPTION("Pretendo Network Patcher, moded by Sucuboy");
 WUMS_MODULE_VERSION(INKAY_VERSION);
 WUMS_MODULE_AUTHOR("Pretendo contributors, Sucuboy");
