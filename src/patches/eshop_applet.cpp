@@ -73,11 +73,11 @@ DECL_FUNCTION(int, FSOpenFile_eShop, FSClient *client, FSCmdBlock *block, char *
 
         DEBUG_FUNCTION_LINE_VERBOSE("Inkay: hewwo eShop!\n");
 
-        if (!replace(0x10000000, 0x10000000, wave_original, sizeof(wave_original), wave_new, sizeof(wave_new)))
-            DEBUG_FUNCTION_LINE_VERBOSE("Inkay: We didn't find the url /)>~<(\\");
+        #if (!replace(0x10000000, 0x10000000, wave_original, sizeof(wave_original), wave_new, sizeof(wave_new)))
+           #DEBUG_FUNCTION_LINE_VERBOSE("Inkay: We didn't find the url /)>~<(\\");
 
-        if (!replace(0x10000000, 0x10000000, (const char *)&original_entry, sizeof(original_entry), (const char *)&new_entry, sizeof(new_entry)))
-            DEBUG_FUNCTION_LINE_VERBOSE("Inkay: We didn't find the whitelist /)>~<(\\");
+        #if (!replace(0x10000000, 0x10000000, (const char *)&original_entry, sizeof(original_entry), (const char *)&new_entry, sizeof(new_entry)))
+            #DEBUG_FUNCTION_LINE_VERBOSE("Inkay: We didn't find the whitelist /)>~<(\\");
 
     // Check for root CA file and take note of its handle
     } else if (strcmp("vol/content/browser/rootca.pem", path) == 0) {
